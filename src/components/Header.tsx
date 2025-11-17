@@ -51,7 +51,7 @@ export default function Header() {
           onClick={() => scrollToSection("#home")}
           className="text-xl font-bold"
         >
-          Rangga.dev
+          R.DMR
         </button>
 
         <nav className="hidden md:flex gap-6 font-medium">
@@ -60,7 +60,7 @@ export default function Header() {
               <button
                 key={item}
                 onClick={() => scrollToSection(`#${item.toLowerCase()}`)}
-                className="hover:text-[var(--accent-color)]"
+                className="hover:text-(--accent-color)"
               >
                 {item}
               </button>
@@ -71,7 +71,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full border bg-[var(--card-color)]"
+            className="p-2 rounded-full border bg-(--card-color)"
           >
             {darkMode ? (
               <Sun size={18} className="text-yellow-400" />
@@ -90,14 +90,14 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-[var(--card-color)] border-t">
+        <div className="md:hidden bg-(--card-color) border-t">
           <nav className="flex flex-col items-center gap-4 py-4 font-medium">
             {["Home", "Experience", "Projects", "Skills", "Contact"].map(
               (item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(`#${item.toLowerCase()}`)}
-                  className="hover:text-[var(--accent-color)]"
+                  className="hover:text-(--accent-color)"
                 >
                   {item}
                 </button>
