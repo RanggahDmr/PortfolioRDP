@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Custom dark variant */
+@custom-variant dark (&:is(.dark *));
+
+/* 🌞 Light Theme */
+:root {
+  --bg-color: #eaf1fb;
+  --card-color: #f5f7fc;
+  --text-color: #1e293b;
+  --muted-color: #64748b;
+  --accent-color: #2563eb;
+  --border-color: #dbe3f3;
+}
+
+/* 🌙 Dark Theme */
+html.dark {
+  --bg-color: #0f172a;
+  --card-color: #1e293b;
+  --text-color: #eaf1fb;
+  --muted-color: #94a3b8;
+  --accent-color: #60a5fa;
+  --border-color: #334155;
+}
+
+/* Smooth transitions */
+html, body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Global background & text */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Section base */
+section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Generic card override */
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.card {
+  background-color: var(--card-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Borders */
+.border,
+.border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  transition: 0.3s ease;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Icons inherit theme */
+svg {
+  color: var(--text-color);
+}
+
+/* Every element inherits text color */
+* {
+  color: inherit;
+}
+
+/* Skills scroll animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section auto container */
+section > div,
+section > .container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
