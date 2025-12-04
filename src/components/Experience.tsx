@@ -27,7 +27,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-(--bg-color) dark:bg-gray-900">
+    <section id="experience" className="py-20 dark:bg-gray-900">
       {/* Section title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
